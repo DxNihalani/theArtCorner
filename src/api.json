@@ -1,0 +1,12 @@
+{
+    "users":[
+        {"uname":"Mansi","pwd":"mansi","email":"mansikortikar@gmail.com", "address":"flat no.3", "contact":"9322093571"},
+        {"uname":"Jui","pwd":"jui","email":"juinaik@gmail.com", "address":"flat no.4", "contact":"9370813362"},
+        {"uname":"Sritika","pwd":"sritika","email":"sritikamanjrekar@gmail.com", "address":"flat no.3", "contact":"9322093571"},
+        {"uname":"Abc","pwd":"abc","email":"abc@gmail.com", "address":"abc", "contact":"0000000000"},
+        {"uname":"Xyz","pwd":"xyz","email":"xyz@gmail.com", "address":"xyz", "contact":"1234567891"}
+
+
+    ]
+ 
+}
