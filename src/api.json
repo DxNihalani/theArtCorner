@@ -1,12 +1,63 @@
 {
     "users":[
-        {"uname":"Mansi","pwd":"mansi","email":"mansikortikar@gmail.com", "address":"flat no.3", "contact":"9322093571"},
-        {"uname":"Jui","pwd":"jui","email":"juinaik@gmail.com", "address":"flat no.4", "contact":"9370813362"},
-        {"uname":"Sritika","pwd":"sritika","email":"sritikamanjrekar@gmail.com", "address":"flat no.3", "contact":"9322093571"},
-        {"uname":"Abc","pwd":"abc","email":"abc@gmail.com", "address":"abc", "contact":"0000000000"},
-        {"uname":"Xyz","pwd":"xyz","email":"xyz@gmail.com", "address":"xyz", "contact":"1234567891"}
+        {"upname":"Mansi","pwd":"mansi","email":"mansikortikar@gmail.com", "address":"flat no.3", "contact":"9322093571"},
+        {"upname":"Jui","pwd":"jui","email":"juinaik@gmail.com", "address":"flat no.4", "contact":"9370813362"},
+        {"upname":"Sritika","pwd":"sritika","email":"sritikamanjrekar@gmail.com", "address":"flat no.3", "contact":"9322093571"},
+        {"upname":"Abc","pwd":"abc","email":"abc@gmail.com", "address":"abc", "contact":"0000000000"},
+        {"upname":"Xyz","pwd":"xyz","email":"xyz@gmail.com", "address":"xyz", "contact":"1234567891"}
 
 
+    ],
+
+    "products":[
+        {"url":"src/images/sculpture1.jpg","id":1,"pname":"sculpture1","description":"beautiful scenic view","category":"Sculpting","price":500},
+        {"url":"src/images/sculpture2.jpg","id":2,"pname":"sculpture2","description":"beautiful scenic view","category":"Sculpting","price":500},
+        {"url":"src/images/sculpture3.jpg","id":3,"pname":"sculpture3","description":"beautiful scenic view","category":"Sculpting","price":500},
+        {"url":"src/images/sculpture4.jpg","id":4,"pname":"sculpture4","description":"beautiful scenic view","category":"Sculpting","price":500},
+        {"url":"src/images/sculpture5.jpg","id":5,"pname":"sculpture5","description":"beautiful scenic view","category":"Sculpting","price":500},
+        {"url":"src/images/sculpture6.jpg","id":6,"pname":"sculpture6","description":"beautiful scenic view","category":"Sculpting","price":500},
+        {"url":"src/images/sculpture7.jpg","id":7,"pname":"sculpture7","description":"beautiful scenic view","category":"Sculpting","price":500},
+        {"url":"src/images/sculpture8.jpg","id":8,"pname":"sculpture8","description":"beautiful scenic view","category":"Sculpting","price":500},
+        {"url":"src/images/sculpture9.jpg","id":9,"pname":"sculpture9","description":"beautiful scenic view","category":"Sculpting","price":500},
+        {"url":"src/images/sculpture10.jpg","id":10,"pname":"sculpture10","description":"beautiful scenic view","category":"Sculpting","price":500},
+        {"url":"src/images/sculpture11.jpg","id":11,"pname":"sculpture11","description":"beautiful scenic view","category":"Sculpting","price":500},
+        {"url":"src/images/sculpture12.jpg","id":12,"pname":"sculpture12","description":"beautiful scenic view","category":"Sculpting","price":500},
+        {"url":"src/images/sculpture13.jpg","id":13,"pname":"sculpture13","description":"beautiful scenic view","category":"Sculpting","price":500},
+        {"url":"src/images/sculpture14.jpg","id":14,"pname":"sculpture14","description":"beautiful scenic view","category":"Sculpting","price":500},
+        {"url":"src/images/sculpture15.jpg","id":15,"pname":"sculpture15","description":"beautiful scenic view","category":"Sculpting","price":500},
+       
+        {"url":"src/images/crochet1.JPG","id":1,"pname":"crochet1","description":"beautiful scenic view","category":"Crochet","price":500},
+        {"url":"src/images/crochet2.jpg","id":2,"pname":"crochet2","description":"beautiful scenic view","category":"Crochet","price":500},
+        {"url":"src/images/crochet3.jpg","id":3,"pname":"crochet3","description":"beautiful scenic view","category":"Crochet","price":500},
+        {"url":"src/images/crochet4.jpg","id":4,"pname":"crochet4","description":"beautiful scenic view","category":"Crochet","price":500},
+        {"url":"src/images/crochet5.jpg","id":5,"pname":"crochet5","description":"beautiful scenic view","category":"Crochet","price":500},
+        {"url":"src/images/crochet6.jpg","id":6,"pname":"crochet6","description":"beautiful scenic view","category":"Crochet","price":500},
+        {"url":"src/images/crochet7.jpg","id":7,"pname":"crochet7","description":"beautiful scenic view","category":"Crochet","price":500},
+        {"url":"src/images/crochet8.jpg","id":8,"pname":"crochet8","description":"beautiful scenic view","category":"Crochet","price":500},
+        {"url":"src/images/crochet9.jpg","id":9,"pname":"crochet9","description":"beautiful scenic view","category":"Crochet","price":500},
+        {"url":"src/images/crochet10.jpg","id":10,"pname":"crochet10","description":"beautiful scenic view","category":"Crochet","price":500},
+        {"url":"src/images/crochet11.jpg","id":11,"pname":"crochet11","description":"beautiful scenic view","category":"Crochet","price":500},
+        {"url":"src/images/crochet12.jpg","id":12,"pname":"crochet12","description":"beautiful scenic view","category":"Crochet","price":500},
+        {"url":"src/images/crochet13.jpg","id":13,"pname":"crochet13","description":"beautiful scenic view","category":"Crochet","price":500},
+        {"url":"src/images/crochet14.jpg","id":14,"pname":"crochet14","description":"beautiful scenic view","category":"Crochet","price":500},
+        
+        
+        {"url":"src/images/photo1.JPG","id":1,"pname":"Photo1","description":"beautiful scenic view","category":"Photgraphy","price":500},
+        {"url":"src/images/photo2.JPG","id":2,"pname":"Photo2","description":"beautiful scenic view","category":"Photgraphy","price":500},
+        {"url":"src/images/photo3.JPG","id":3,"pname":"Photo3","description":"beautiful scenic view","category":"Photgraphy","price":500},
+        {"url":"src/images/photo4.JPG","id":4,"pname":"Photo4","description":"beautiful scenic view","category":"Photgraphy","price":500},
+        {"url":"src/images/photo5.JPG","id":5,"pname":"Photo5","description":"beautiful scenic view","category":"Photgraphy","price":500},
+        {"url":"src/images/photo6.JPG","id":6,"pname":"Photo6","description":"beautiful scenic view","category":"Photgraphy","price":500},
+        {"url":"src/images/photo7.JPG","id":7,"pname":"Photo7","description":"beautiful scenic view","category":"Photgraphy","price":500},
+        {"url":"src/images/photo8.JPG","id":8,"pname":"Photo8","description":"beautiful scenic view","category":"Photgraphy","price":500},
+        {"url":"src/images/photo9.JPG","id":9,"pname":"Photo9","description":"beautiful scenic view","category":"Photgraphy","price":500},
+        {"url":"src/images/photo10.JPG","id":10,"pname":"Photo10","description":"beautiful scenic view","category":"Photgraphy","price":500},
+        {"url":"src/images/photo11.JPG","id":11,"pname":"Photo11","description":"beautiful scenic view","category":"Photgraphy","price":500},
+        {"url":"src/images/photo12.JPG","id":12,"pname":"Photo12","description":"beautiful scenic view","category":"Photgraphy","price":500},
+        {"url":"src/images/photo13.JPG","id":13,"pname":"Photo13","description":"beautiful scenic view","category":"Photgraphy","price":500},
+        {"url":"src/images/photo14.JPG","id":14,"pname":"Photo14","description":"beautiful scenic view","category":"Photgraphy","price":500},
+        {"url":"src/images/photo15.JPG","id":15,"pname":"Photo15","description":"beautiful scenic view","category":"Photgraphy","price":500}
+      
     ]
  
 }
