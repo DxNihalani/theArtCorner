@@ -21,21 +21,40 @@
 
 .container {
   display: flex;
-  flex-direction: column;
+
   justify-content: center;
   align-items: center;
-  height: 100%;
+  text-align: center;
+  width: 1000px;
+}
+
+.container h1 {
+  font-size: 50px;
+  margin: 0;
+  width: 350px;
+}
+
+.container p {
+  margin: 0;
+  width: 350px;
 }
 
 .card {
-  width: 450px;
-  height: 450px;
-
+  width: 550px;
+  height: 400px;
+  margin: 0px;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center;
+  align-items: center; */
 }
 
 button {
+
   background-color: #F8F6F4;
   color: black;
+  font-size: 20px;
 }
 
 button:hover {
@@ -51,9 +70,10 @@ button:hover {
 
 .row {
   display: flex;
+  flex-direction: column;
   text-align: left;
-  row-gap: 5px;
-  align-items: flex-start;
+
+
 }
 
 .bg-glass {
