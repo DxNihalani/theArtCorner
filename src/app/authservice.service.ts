@@ -5,21 +5,18 @@ import { Injectable } from '@angular/core';
 })
 export class AuthService {
   private loggedInUser: any = null;
-  private storedUser: any = null;
 
-  constructor() { }
+  constructor() {
+    this.loadUserFromLocalStorage();
+  }
 
   setLoggedInUser(user: any) {
     this.loggedInUser = user;
-    this.storedUser = user; // Store the user information
+    localStorage.setItem('loggedInUser', JSON.stringify(user));
   }
 
   getLoggedInUser() {
     return this.loggedInUser;
-  }
-
-  getStoredUser() {
-    return this.storedUser;
   }
 
   isLoggedIn() {
@@ -28,5 +25,13 @@ export class AuthService {
 
   logout() {
     this.loggedInUser = null;
+    localStorage.removeItem('loggedInUser');
+  }
+
+  private loadUserFromLocalStorage() {
+    const user = localStorage.getItem('loggedInUser');
+    if (user) {
+      this.loggedInUser = JSON.parse(user);
+    }
   }
 }
