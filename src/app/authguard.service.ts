@@ -13,6 +13,7 @@ export class AuthGuard implements CanActivate {
     if (this.authService.isLoggedIn()) {
       return true;
     } else {
+      alert('Please Log In to access Dashboard and Cart');
       this.router.navigate(['/login']);
       return false;
     }
