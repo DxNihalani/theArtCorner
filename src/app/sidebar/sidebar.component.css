@@ -1,0 +1,17 @@
+.nav {
+    /* background-color: rgb(227, 244, 244); */
+   
+}
+.nav-link {
+    color: #C4DFDF;
+    transition: background-color 0.3s ease;
+    font-size: larger;
+}
+.nav-link:hover {
+    color: #D2E9E9;
+}
+
+body {
+    background-color: rgb(248, 246, 244);
+    font-family: Arial, sans-serif;
+}
