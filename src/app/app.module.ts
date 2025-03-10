@@ -13,6 +13,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { LogoutComponent } from './logout/logout.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { BodyComponent } from './body/body.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { MainBodyComponent } from './main-body/main-body.component';
 
 
 @NgModule({
@@ -24,7 +27,11 @@ import { FooterComponent } from './footer/footer.component';
     CartComponent,
     DashboardComponent,
     LogoutComponent,
-    FooterComponent,HeaderComponent
+    FooterComponent,
+    HeaderComponent,
+    BodyComponent,
+    SidebarComponent,
+    MainBodyComponent,
 
   ],
   imports: [
