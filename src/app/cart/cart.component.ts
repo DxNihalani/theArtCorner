@@ -18,14 +18,13 @@ export class CartComponent {
   total:number=0;
 
   constructor ( private _sc:ApiService, private _http:HttpClient){
+    const user: any = localStorage.getItem("loggedInUser");
+    const userId = user ? JSON.parse(user).id : null;
       this._http.get<any[]>(this.cartUrl)
-      .subscribe(reponse=>{
-        this.cartList = reponse; this.count=this.cartList.length;  if(this.count==0) this.msg='Cart is Empty!';
-      })
-      // for (let cart of this.cartList){
-      //   this.cartItem += this._sc.getProductByID(cart.id);
-      // }
-      // console.log(this.cartItem.id);
+      .subscribe(response=>{
+        this.cartList = response.filter(item => item.userId === userId);
+        this.count = this.cartList.length;      })
+    
       this._http.get<any[]>(this.ProductUrl)
       .subscribe(response=>{
         this.productList=response;

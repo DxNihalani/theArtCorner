@@ -26,8 +26,7 @@
     },
     {
       "id": "e903",
-      "firstName": "Vidhi",
-      "lastName": "Prajapati",
+      "uname": "Vidhi",
       "address": "C-102. the laal street, mumbai",
       "contact": "1234567865",
       "email": "abc@gmail.com",
@@ -35,8 +34,7 @@
     },
     {
       "id": "e410",
-      "firstName": "sakshi",
-      "lastName": "bole",
+      "uname": "sakshi",
       "address": "deloitte towers",
       "contact": "1234567890",
       "email": "sbole@deloitte.com",
@@ -612,18 +610,8 @@
       "pname": "Ancient Echoes",
       "description": "Mystic Faces - Echoes of Ancient Artistry",
       "category": "Sculpting",
-      "price": 500
-    },
-    {
-      "id": "3c96",
-      "url": "assets/images/sculpture7.jpg",
-      "pname": "Poised Motion",
-      "description": "Poised Balance - Capturing Grace in Motion",
-      "category": "Sculpting",
-      "price": 500
+      "price": 500,
+      "userId": "e410"
     }
   ]
-
-
 }
- 

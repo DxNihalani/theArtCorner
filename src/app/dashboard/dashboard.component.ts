@@ -31,7 +31,7 @@ export class DashboardComponent implements OnInit {
   filteredProducts: Product[] = [];
   categories = ['Sculpting', 'Painting', 'Crochet', 'Photography', 'Pen Sketch'];
   selectedCategory: string = 'Sculpting';
-  url: string = 'http://localhost:3000';
+  url: string = 'http://localhost:3000/users';
   isEditVisible: boolean = false;
 
   constructor(private _http: HttpClient, private authService: AuthService) {}
