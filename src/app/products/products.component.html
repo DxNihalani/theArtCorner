@@ -19,6 +19,7 @@
       </div>
     </div>
     <div class="row">
+      
       <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4" *ngFor="let product of product">
         <div class="card hover-card h-100">
           <img
@@ -31,7 +32,10 @@
             <div class="card-overlay">
               <p class="card-text">{{ product.description }}</p>
               <p class="card-text"><strong>Price:</strong> ${{ product.price }}</p>
-              <a href="#" class="btn btn-primary">Add to Cart</a>
+              <p class="card-text"><strong>Id:</strong> ${{ product.id }}</p>
+              <div *ngIf="loading">Loading...</div>
+      <div *ngIf="!loading">
+              <button class="btn btn-primary" (click)="addToCartByID(product.id)">Add to Cart</button>
             </div>
           </div>
         </div>
