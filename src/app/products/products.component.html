@@ -22,6 +22,10 @@
       
       <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4" *ngFor="let product of product">
         <div class="card hover-card h-100">
+          <div class="card-overlay">
+            <p class="card-text"><strong>Price:</strong> ${{ product.price }}</p>
+            <a href="#" class="btn btn-primary">Add to Cart</a>
+          </div>
           <img
             [src]="product.url"
             class="card-img-top"

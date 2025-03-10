@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { UserService } from '../user.service';
 import { Router } from '@angular/router';
+import { AuthService } from '../authservice.service';
 
 @Component({
   selector: 'app-login',
@@ -9,18 +10,24 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent {
   email = '';
-  password = '';
+  pwd = '';
 
-  constructor(private userService: UserService, private router: Router) { }
+  constructor(
+    private userService: UserService,
+    private router: Router,
+    private authService: AuthService
+  ) { }
 
   onSubmit() {
     this.userService.getUsers().subscribe(users => {
-      const user = users.find((u: any) => u.email === this.email && u.password === this.password);
+      const user = users.find((u: any) => u.email === this.email && u.pwd === this.pwd);
       if (user) {
-        console.log('Login successful');
+        this.authService.setLoggedInUser(user);
+        alert('Login successful');
         // Redirect to the desired page
+        this.router.navigate(['/dashboard']); // Replace with your desired path
       } else {
-        console.log('Invalid credentials');
+        alert('Invalid credentials');
       }
     });
   }
