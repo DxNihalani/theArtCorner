@@ -1,7 +1,8 @@
 body {
-  background-color: #F8F6F4; /* Light background color */
+  background-color: #f8f6f4; /* Light background color */
   font-family: Arial, sans-serif;
   height: 100vh;
+  
 }
 
 .container {
@@ -23,7 +24,7 @@ body {
 .card {
   background-color: #ffffff; /* White background for cards */
   border: 1px solid #d2e9e9; /* Border color */
-  border-radius: 0px;
+  border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   height: auto; /* Ensure card height is flexible */
   width: 100%; /* Ensure card width is flexible */
@@ -96,6 +97,7 @@ a:hover {
 .form-select:focus {
   border-color: #c4dfdf; /* Border color on focus */
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }
 
 .form-select option {
