@@ -4,15 +4,18 @@ import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CartComponent } from './cart/cart.component';
-import { AuthGuard } from './authguard.service';
 import { ProductsComponent } from './products/products.component';
-import { RegistrationComponent } from './registration/registration.component';
+
+import { ProductsComponent } from './products/products.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { LogoutComponent } from './logout/logout.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
-  { path: 'register', component:RegistrationComponent },
-  //{ path: '', redirectTo: '/registration', pathMatch: 'full' } ,
-  { path: 'products', component: ProductsComponent},
+  { path: 'registration', component: RegistrationComponent },
+<<<<<<<<< Temporary merge branch 1
+  { path: '', redirectTo: '/registration', pathMatch: 'full' } ,
+
   { path: 'dashboard', component: DashboardComponent},
   {path:'cart', component:CartComponent},
   {path:'logout', component:LogoutComponent}
