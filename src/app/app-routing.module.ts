@@ -8,7 +8,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'registration', component: RegistrationComponent },
   { path: '', redirectTo: '/registration', pathMatch: 'full' } ,
-  {path:'cart', component:CartComponent}
+  {path:'cart', component:CartComponent}]
   // Default route
 
 
@@ -16,4 +16,6 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule { 
+
+}
