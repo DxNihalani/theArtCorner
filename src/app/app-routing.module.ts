@@ -10,7 +10,8 @@ import { LogoutComponent } from './logout/logout.component';
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'registration', component: RegistrationComponent },
-  { path: '', redirectTo: '/registration', pathMatch: 'full' } ,
+
+  { path: 'products', component:ProductsComponent } ,
 
   { path: 'dashboard', component: DashboardComponent},
   {path:'cart', component:CartComponent},
