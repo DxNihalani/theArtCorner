@@ -21,40 +21,20 @@
 
 .container {
   display: flex;
-
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  width: 1000px;
-}
-
-.container h1 {
-  font-size: 50px;
-  margin: 0;
-  width: 350px;
-}
-
-.container p {
-  margin: 0;
-  width: 350px;
+  height: 100%;
 }
 
 .card {
-  width: 550px;
-  height: 400px;
-  margin: 0px;
-  font-size: 20px;
-  display: flex;
-  flex-direction: column;
-  /* justify-content: center;
-  align-items: center; */
+  width: 100%;
+  max-width: 500px;
 }
 
 button {
-
   background-color: #F8F6F4;
   color: black;
-  font-size: 20px;
 }
 
 button:hover {
@@ -70,13 +50,80 @@ button:hover {
 
 .row {
   display: flex;
-  flex-direction: column;
   text-align: left;
-
-
+  row-gap: 5px;
+  align-items: flex-start;
 }
 
 .bg-glass {
   background-color: #C4DFDF !important;
   backdrop-filter: saturate(200%) blur(25px);
+}
+
+.reveal-text,
+.reveal-text::after {
+  animation-delay: var(--animation-delay, 2s);
+  animation-iteration-count: var(--iterations, 1);
+  animation-duration: var(--duration, 800ms);
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.reveal-text {
+  --animation-delay: var(--delay, 0);
+  --animation-duration: var(--duration, 800ms);
+  --animation-iterations: var(--iterations, 1);
+  position: relative;
+  font-size: 4.3vw;
+  animation-name: clip-text;
+  color:#687d7d;
+  white-space: nowrap;
+  cursor: default;
+  
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #F8F6F4;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    pointer-events: none;
+    animation-name: text-revealer;
+  }
+  
+}
+
+
+@keyframes clip-text {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+
+@keyframes text-revealer {
+  
+  0%, 50% {
+    transform-origin: 0 50%;
+  }
+  
+  60%, 100% {
+    transform-origin: 100% 50%;   
+  }
+
+  
+  60% {
+    transform: scaleX(1);
+  }
+  
+  100% {
+    transform: scaleX(0);
+  }
 }

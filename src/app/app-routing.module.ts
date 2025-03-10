@@ -5,13 +5,15 @@ import { RegistrationComponent } from './registration/registration.component';
 import { CartComponent } from './cart/cart.component';
 import { ProductsComponent } from './products/products.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-
+import { LogoutComponent } from './logout/logout.component';
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'registration', component: RegistrationComponent },
   { path: '', redirectTo: '/registration', pathMatch: 'full' } ,
   { path: 'dashboard', component: DashboardComponent},
-  {path:'cart', component:CartComponent}]
+  {path:'cart', component:CartComponent},
+  {path:'logout', component:LogoutComponent}]
+  
   // Default route
 
 
