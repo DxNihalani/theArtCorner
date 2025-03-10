@@ -20,9 +20,6 @@ const routes: Routes = [
   {path:'logout', component:LogoutComponent}
 ]
 
-  // Default route
-
-
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
