@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { UserService } from '../user.service';
-
+import { Router } from '@angular/router';
+import { AuthService } from '../authservice.service';
 @Component({
   selector: 'app-registration',
   templateUrl: './registration.component.html',
@@ -19,7 +20,9 @@ export class RegistrationComponent {
   isRegistered = false; // Add this flag
   errorMessage = ''; // Add this flag
 
-  constructor(private userService: UserService) { }
+  constructor(    private userService: UserService,
+    private router: Router,
+    private authService: AuthService) { }
 
   onSubmit(registrationForm: any) {
     if (registrationForm.valid) {
@@ -27,7 +30,7 @@ export class RegistrationComponent {
         this.isRegistered = true; // Set the flag to true on successful registration
         this.errorMessage = ''; // Clear the error message
         alert('You are registered successfully!'); // Show alert message
-        window.open('/login', '_blank'); // Open login page in a new tab
+        this.router.navigate(['/login']); // Open login page in a new tab
       });
     } else {
       this.isRegistered = false; // Ensure the success message is not shown
