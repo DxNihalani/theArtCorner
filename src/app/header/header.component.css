@@ -7,7 +7,7 @@
 
 .navbar {
     background-color: rgb(196, 223, 223);
-    padding: 10px;
+    padding: 20px;
     position: fixed;
 }
 .nav-item {
@@ -36,5 +36,6 @@
     color: #F8F6F4;
     font-size: xx-large;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
+    position: relative;
+    left:20px;
 }

@@ -9,7 +9,11 @@ import { RegistrationComponent } from './registration/registration.component';
 import { ProductsComponent } from './products/products.component';
 import { CartComponent } from './cart/cart.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+
 import { LogoutComponent } from './logout/logout.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+
 
 @NgModule({
   declarations: [
@@ -20,6 +24,8 @@ import { LogoutComponent } from './logout/logout.component';
     CartComponent,
     DashboardComponent,
     LogoutComponent,
+    FooterComponent,HeaderComponent
+
   ],
   imports: [
     BrowserModule,
