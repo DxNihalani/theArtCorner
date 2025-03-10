@@ -19,26 +19,16 @@
             
             <form (ngSubmit)="onSubmit(registrationForm)" #registrationForm="ngForm">
             
-              <div class="row">
-                <div class="col-md-6 mb-4">
-                  <div class="form-outline">
-                    <label class="form-label" for="firstName">First name</label>
-                    <input type="text" id="firstName" class="form-control" [(ngModel)]="user.firstName" name="firstName" required />
+             
+             
+                  <div class="form-group">
+                    <label class="form-label" for="firstName">Username</label>
+                    <input type="text" id="firstName" class="form-control" [(ngModel)]="user.uname" name="firstName" required />
                     <div *ngIf="registrationForm.submitted && !registrationForm.controls['firstName']?.valid" class="text-danger">
-                      First name is required.
+                     Username is required.
                     </div>
                   </div>
-                </div>
-                <div class="col-md-6 mb-4">
-                  <div class="form-outline">
-                    <label class="form-label" for="lastName">Last name</label>
-                    <input type="text" id="lastName" class="form-control" [(ngModel)]="user.lastName" name="lastName" required />
-                    <div *ngIf="registrationForm.submitted && !registrationForm.controls['lastName']?.valid" class="text-danger">
-                      Last name is required.
-                    </div>
-                  </div>
-                </div>
-              </div>
+          
               <div class="form-group">
                 <label class="form-label" for="address">Address</label>
                 <input type="text" id="address" class="form-control" [(ngModel)]="user.address" name="address" required />

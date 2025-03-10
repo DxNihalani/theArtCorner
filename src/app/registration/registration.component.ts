@@ -9,8 +9,7 @@ import { AuthService } from '../authservice.service';
 })
 export class RegistrationComponent {
   user = {
-    firstName: '',
-    lastName: '',
+    uname: '',
     address: '',
     contact: '',
     email: '',
