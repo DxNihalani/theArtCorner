@@ -6,11 +6,12 @@ import { CartComponent } from './cart/cart.component';
 import { ProductsComponent } from './products/products.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LogoutComponent } from './logout/logout.component';
-
+import { AuthGuard } from './authguard.service';
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'registration', component: RegistrationComponent },
-
+  {path:'', redirectTo:'/login', pathMatch:'full'},
+  {path:'**', redirectTo:'/login' },
   { path: 'products', component:ProductsComponent } ,
 
   { path: 'dashboard', component: DashboardComponent},
