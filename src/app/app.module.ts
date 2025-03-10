@@ -9,11 +9,11 @@ import { RegistrationComponent } from './registration/registration.component';
 import { ProductsComponent } from './products/products.component';
 import { CartComponent } from './cart/cart.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-
 import { LogoutComponent } from './logout/logout.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-
+import { AuthGuard } from './authguard.service';
+import { AuthService } from './authservice.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +24,8 @@ import { FooterComponent } from './footer/footer.component';
     CartComponent,
     DashboardComponent,
     LogoutComponent,
-    FooterComponent,HeaderComponent
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +33,7 @@ import { FooterComponent } from './footer/footer.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [AuthGuard, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

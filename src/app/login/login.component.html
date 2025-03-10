@@ -48,7 +48,7 @@
               <div class="form-outline mb-4">
                 <label class="form-label" for="password">Password</label>
                 <input type="password" id="password" class="form-control" [(ngModel)]="pwd" name="password" required minlength="6" />
-                <div *ngIf="loginForm.submitted && !loginForm.controls['password']?.valid" class="text-danger">
+                <div *ngIf="loginForm.submitted && !loginForm.controls['pwd']?.valid" class="text-danger">
                   Password is required and must be at least 6 characters long.
                 </div>
               </div>

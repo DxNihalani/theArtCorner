@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { UserService } from '../user.service';
 import { Router } from '@angular/router';
 import { AuthService } from '../authservice.service';
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -16,6 +15,7 @@ export class LoginComponent {
     private userService: UserService,
     private router: Router,
     private authService: AuthService
+
   ) { }
 
   onSubmit() {

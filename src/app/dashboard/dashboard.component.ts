@@ -76,6 +76,7 @@ export class DashboardComponent implements OnInit {
       this._http.put<User>(`${this.url}/users/${this.loggedInUser.uname}`, updatedUser)
         .subscribe(response => {
           this.loggedInUser = response;
+          this.authService.setLoggedInUser(response); // Update local storage
           alert('User details updated successfully!');
         }, error => {
           console.error('Error updating user details:', error);
