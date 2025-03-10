@@ -31,7 +31,7 @@ export class DashboardComponent implements OnInit {
   filteredProducts: Product[] = [];
   categories = ['Sculpting', 'Painting', 'Crochet', 'Photography', 'Pen Sketch'];
   selectedCategory: string = 'Sculpting';
-  url: string = 'http://localhost:3000/users';
+  url: string = 'http://localhost:3000';
   isEditVisible: boolean = false;
 
   constructor(private _http: HttpClient, private authService: AuthService) {}
@@ -44,6 +44,10 @@ export class DashboardComponent implements OnInit {
       });
     }
 
+    this.fetchUsers().subscribe((data: User[]) => {
+      this.users = data;
+    });
+
     this.fetchProducts().subscribe((data: Product[]) => {
       this.products = data;
       this.updateProducts();
@@ -52,6 +56,10 @@ export class DashboardComponent implements OnInit {
 
   fetchUserDetails(uname: string): Observable<User> {
     return this._http.get<User>(`${this.url}/users/${uname}`);
+  }
+
+  fetchUsers(): Observable<User[]> {
+    return this._http.get<User[]>(`${this.url}/users`);
   }
 
   fetchProducts(): Observable<Product[]> {
