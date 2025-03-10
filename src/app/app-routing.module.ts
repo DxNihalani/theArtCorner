@@ -9,13 +9,17 @@ import { RegistrationComponent } from './registration/registration.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
-  { path: 'logout', component: LogoutComponent },
-  { path: 'dashboard', component: DashboardComponent },
-  { path: 'cart', component: CartComponent},
-  { path: 'registration', component: RegistrationComponent }
-  // { path: '', redirectTo: '/login', pathMatch: 'full' },
-  // { path: '**', redirectTo: '/login' }
-];
+
+  { path: 'register', component: RegistrationComponent },
+
+ // { path: '', redirectTo: '/registration', pathMatch: 'full' } ,
+
+  { path: 'dashboard', component: DashboardComponent},
+  { path: 'products', component: ProductsComponent},
+  {path:'cart', component:CartComponent},
+  {path:'logout', component:LogoutComponent}
+]
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

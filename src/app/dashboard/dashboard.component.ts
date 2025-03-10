@@ -38,6 +38,7 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
     this.loggedInUser = this.authService.getLoggedInUser();
+    console.log(this.loggedInUser);
     if (this.loggedInUser) {
       this.fetchUserDetails(this.loggedInUser.uname).subscribe((user: User) => {
         this.loggedInUser = user;
