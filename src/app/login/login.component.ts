@@ -9,18 +9,18 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent {
   email = '';
-  password = '';
+  pwd = '';
 
   constructor(private userService: UserService, private router: Router) { }
 
   onSubmit() {
     this.userService.getUsers().subscribe(users => {
-      const user = users.find((u: any) => u.email === this.email && u.password === this.password);
+      const user = users.find((u: any) => u.email === this.email && u.pwd === this.pwd);
       if (user) {
-        console.log('Login successful');
+        alert('Login successful');
         // Redirect to the desired page
       } else {
-        console.log('Invalid credentials');
+        alert('Invalid credentials');
       }
     });
   }

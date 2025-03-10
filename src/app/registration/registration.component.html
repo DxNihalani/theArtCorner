@@ -1,23 +1,10 @@
-<!-- required bootstrap css -->
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-<link rel="stylesheet" href="registration.component.css">
-<!-- required bootstrap js -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
-<!-- Section: Design Block -->
 <section class="background-radial-gradient overflow-hidden">
-
-
   <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
     <div class="row gx-lg-5 align-items-center mb-5">
       <div class="col-lg-6 mb-5 mb-lg-0" style="z-index: 10">
-        <h1 class="my-5 display-5 fw-bold ls-tight" style="color: hsl(0, 0%, 0%)">
-          The best offer <br />
-          <span style="color: hsl(0, 0%, 0%)">for your business</span>
-        </h1>
+        <h1 class="my-8 display-8 fw-bold ls-tight" style="color: hsl(0, 0%, 0%);">
+          The Art Corner <br />
+           </h1>
         <p class="mb-4 opacity-70" style="color: hsl(0, 0%, 0%)">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit.
           Temporibus, expedita iusto veniam atque, magni tempora mollitia
@@ -29,52 +16,72 @@
       <div class="col-lg-6 mb-5 mb-lg-0 position-relative">
         <div class="card bg-glass">
           <div class="card-body px-4 py-5 px-md-5">
-            <form (ngSubmit)="onSubmit()">
+            
+            <form (ngSubmit)="onSubmit(registrationForm)" #registrationForm="ngForm">
+            
               <div class="row">
                 <div class="col-md-6 mb-4">
                   <div class="form-outline">
                     <label class="form-label" for="firstName">First name</label>
                     <input type="text" id="firstName" class="form-control" [(ngModel)]="user.firstName" name="firstName" required />
+                    <div *ngIf="registrationForm.submitted && !registrationForm.controls['firstName']?.valid" class="text-danger">
+                      First name is required.
+                    </div>
                   </div>
                 </div>
                 <div class="col-md-6 mb-4">
                   <div class="form-outline">
                     <label class="form-label" for="lastName">Last name</label>
                     <input type="text" id="lastName" class="form-control" [(ngModel)]="user.lastName" name="lastName" required />
+                    <div *ngIf="registrationForm.submitted && !registrationForm.controls['lastName']?.valid" class="text-danger">
+                      Last name is required.
+                    </div>
                   </div>
                 </div>
               </div>
               <div class="form-group">
                 <label class="form-label" for="address">Address</label>
-                <input type="address" id="address" class="form-control" [(ngModel)]="user.address" name="address" required />
+                <input type="text" id="address" class="form-control" [(ngModel)]="user.address" name="address" required />
+                <div *ngIf="registrationForm.submitted && !registrationForm.controls['address']?.valid" class="text-danger">
+                  Address is required.
+                </div>
               </div>
 
               <div class="form-group">
                 <label class="form-label" for="phone">Contact Number</label>
-                <input type="number" id="phone" class="form-control" [(ngModel)]="user.contact" name="contact" required />
+                <input type="text" id="phone" class="form-control" [(ngModel)]="user.contact" name="contact" required pattern="^\d{10}$" />
+                <div *ngIf="registrationForm.submitted && !registrationForm.controls['contact']?.valid" class="text-danger">
+                  Contact number is required and must be exactly 10 digits.
+                </div>
               </div>
             
               <div class="form-outline mb-4">
                 <label class="form-label" for="email">Email address</label>
-                <input type="email" id="email" class="form-control" [(ngModel)]="user.email" name="email" required />
+                <input type="email" id="email" class="form-control" [(ngModel)]="user.email" name="email" required email />
+                <div *ngIf="registrationForm.submitted && !registrationForm.controls['email']?.valid" class="text-danger">
+                  Please enter a valid email address.
+                </div>
               </div>
             
               <div class="form-outline mb-4">
                 <label class="form-label" for="password">Password</label>
-                <input type="password" id="password" class="form-control" [(ngModel)]="user.password" name="password" required />
+                <input type="password" id="password" class="form-control" [(ngModel)]="user.pwd" name="password" required minlength="6" />
+                <div *ngIf="registrationForm.submitted && !registrationForm.controls['password']?.valid" class="text-danger">
+                  Password is required !
+                </div>
               </div>
             
               <button type="submit" class="btn btn-primary btn-block mb-4">Sign up</button>
+              <div *ngIf="errorMessage" class="alert alert-danger mt-4">
+                {{ errorMessage }}
+              </div>
               <div *ngIf="isRegistered" class="alert alert-success mt-4">
                 You are registered successfully!
               </div>
             </form>
-
-
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- Section: Design Block -->
