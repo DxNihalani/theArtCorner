@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { UserService } from '../user.service';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-registration',
@@ -14,20 +13,19 @@ export class RegistrationComponent {
     address: '',
     contact: '',
     email: '',
-    password: ''
+    pwd: ''
   };
 
   isRegistered = false; // Add this flag
 
-  constructor(private userService: UserService, private router: Router) { }
+  constructor(private userService: UserService) { }
 
   onSubmit() {
     this.userService.addUser(this.user).subscribe(response => {
       console.log('User added successfully', response);
       this.isRegistered = true; // Set the flag to true on successful registration
       alert('You are registered successfully!'); // Show alert message
-      // this.router.navigate(['/login']); // Navigate to login page
-      window.open('/login', '_blank');
+      window.open('/login', '_blank'); // Open login page in a new tab
     });
   }
 }
