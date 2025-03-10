@@ -30,7 +30,7 @@ export class LoginComponent {
         console.log(user);
         localStorage.setItem("userId",user.id);
         console.log(localStorage.getItem("userId"));
-        // this.router.navigate(['/dashboard']); // Replace with your desired path
+        this.router.navigate(['/dashboard']); // Replace with your desired path
       } else {
         alert('Invalid credentials');
       }

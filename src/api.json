@@ -607,23 +607,36 @@
   ],
   "cart": [
     {
-      "id": "ed51",
-      "url": "assets/images/sculpture2.jpg",
-      "pname": "Ancient Echoes",
-      "description": "Mystic Faces - Echoes of Ancient Artistry",
-      "category": "Sculpting",
-      "price": 500
-    },
-    {
       "id": "3c96",
       "url": "assets/images/sculpture7.jpg",
       "pname": "Poised Motion",
       "description": "Poised Balance - Capturing Grace in Motion",
       "category": "Sculpting",
       "price": 500
+    },
+    {
+      "id": "5ab7",
+      "url": "assets/images/sketch2.jpg",
+      "pname": "Blue Mandala",
+      "description": "A striking blue mandala with geometric patterns.",
+      "category": "Pen Sketch",
+      "price": 500
+    },
+    {
+      "id": "8630",
+      "url": "assets/images/sketch7.jpg",
+      "pname": "Hummingbird Sketch",
+      "description": "A delicate sketch of a hummingbird in flight.",
+      "category": "Pen Sketch",
+      "price": 500
+    },
+    {
+      "id": "21d1",
+      "url": "assets/images/sketch11.jpg",
+      "pname": "Detailed Mandala",
+      "description": "A highly detailed mandala with intricate designs.",
+      "category": "Pen Sketch",
+      "price": 500
     }
   ]
-
-
 }
- 

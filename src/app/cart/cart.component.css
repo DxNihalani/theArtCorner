@@ -127,7 +127,7 @@ input:focus::-webkit-input-placeholder
     box-shadow: none;
     color: white;
     -webkit-box-shadow: none;
-    -webkit-user-select: none;
+    user-select: none;
     transition: none; 
 }
 .btn:hover{
@@ -137,7 +137,7 @@ a{
     color: black; 
 }
 a:hover{
-    color: black;
+    color: rgb(94, 91, 91);
     text-decoration: none;
 }
  #code{
