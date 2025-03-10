@@ -15,6 +15,7 @@ const routes: Routes = [
  // { path: '', redirectTo: '/registration', pathMatch: 'full' } ,
 
   { path: 'dashboard', component: DashboardComponent},
+  { path: 'products', component: ProductsComponent},
   {path:'cart', component:CartComponent},
   {path:'logout', component:LogoutComponent}
 ]
