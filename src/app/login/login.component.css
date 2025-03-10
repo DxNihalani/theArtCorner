@@ -1,0 +1,44 @@
+.background-radial-gradient {
+    background-size: cover;
+    height: 100vh;
+    background-color: #C4DFDF;
+    background-image: radial-gradient(650px circle at 0% 0%,
+        #C4DFDF 15%,
+        #D2E9E9 35%,
+        #E3F4F4 75%,
+        #F8F6F4 80%,
+        transparent 100%),
+      radial-gradient(1250px circle at 100% 100%,
+        #C4DFDF 15%,
+        #D2E9E9 35%,
+        #E3F4F4 75%,
+        #F8F6F4 80%,
+        transparent 100%);
+  }
+  form{
+    height: 60vh;
+  
+  }
+  button {
+    background-color: #F8F6F4;
+    color: black;
+  }
+  button:hover {
+    color: white;
+    background-color: black;
+    transition: 0.4s ease;
+  }
+  .row label {
+    color: black;
+    font-weight: 500;
+  }
+  .row {
+    display: flex;
+    text-align: left;
+    row-gap: 5px;
+    align-items: flex-start;
+  }
+  .bg-glass {
+    background-color: #C4DFDF !important;
+    backdrop-filter: saturate(200%) blur(25px);
+  }
