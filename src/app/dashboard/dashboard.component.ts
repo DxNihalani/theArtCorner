@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+import { AuthService } from '../authservice.service';
 
 interface User {
   uname: string;
@@ -33,13 +34,15 @@ export class DashboardComponent implements OnInit {
   url: string = 'http://localhost:3000';
   isEditVisible: boolean = false;
 
-  constructor(private _http: HttpClient) {}
+  constructor(private _http: HttpClient, private authService: AuthService) {}
 
   ngOnInit(): void {
-    this.fetchUsers().subscribe((data: User[]) => {
-      this.users = data;
-      this.loggedInUser = this.getLoggedInUser();
-    });
+    this.loggedInUser = this.authService.getLoggedInUser();
+    if (this.loggedInUser) {
+      this.fetchUserDetails(this.loggedInUser.uname).subscribe((user: User) => {
+        this.loggedInUser = user;
+      });
+    }
 
     this.fetchProducts().subscribe((data: Product[]) => {
       this.products = data;
@@ -47,8 +50,8 @@ export class DashboardComponent implements OnInit {
     });
   }
 
-  fetchUsers(): Observable<User[]> {
-    return this._http.get<User[]>(`${this.url}/users`);
+  fetchUserDetails(uname: string): Observable<User> {
+    return this._http.get<User>(`${this.url}/users/${uname}`);
   }
 
   fetchProducts(): Observable<Product[]> {
@@ -68,22 +71,11 @@ export class DashboardComponent implements OnInit {
       .slice(0, 3); // Display only the first 3 products
   }
 
-  getLoggedInUser(): User | null {
-    // Replace this with actual logic to get the logged-in user
-    const loggedInUserName = 'Mansi'; // Example logged-in user
-    return this.users.find(user => user.uname === loggedInUserName) || null;
-  }
-
   updateUserDetails(updatedUser: User): void {
     if (this.loggedInUser) {
       this._http.put<User>(`${this.url}/users/${this.loggedInUser.uname}`, updatedUser)
         .subscribe(response => {
           this.loggedInUser = response;
-          // Update the users array with the updated user details
-          const index = this.users.findIndex(user => user.uname === this.loggedInUser!.uname);
-          if (index !== -1) {
-            this.users[index] = this.loggedInUser;
-          }
           alert('User details updated successfully!');
         }, error => {
           console.error('Error updating user details:', error);
