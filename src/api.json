@@ -23,6 +23,15 @@
       "address": "flat no.3",
       "contact": "9322093571",
       "id": "8e39"
+    },
+    {
+      "id": "a10b",
+      "firstName": "abc",
+      "lastName": "abc",
+      "address": "abc",
+      "contact": "1234567898",
+      "email": "mansi@gmail.com",
+      "pwd": "mansimansi"
     }
   ],
   "products": [
