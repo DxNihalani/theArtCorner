@@ -14,10 +14,6 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { AuthGuard } from './authguard.service';
 import { AuthService } from './authservice.service';
-import { BodyComponent } from './body/body.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
-import { MainBodyComponent } from './main-body/main-body.component';
-
 
 @NgModule({
   declarations: [
@@ -28,12 +24,8 @@ import { MainBodyComponent } from './main-body/main-body.component';
     CartComponent,
     DashboardComponent,
     LogoutComponent,
-    FooterComponent,
     HeaderComponent,
-    BodyComponent,
-    SidebarComponent,
-    MainBodyComponent,
-
+    FooterComponent
   ],
   imports: [
     BrowserModule,

@@ -12,8 +12,9 @@ export class AuthService {
 
   setLoggedInUser(user: any) {
     this.loggedInUser = user;
-    localStorage.setItem('loggedInUser', JSON.stringify(user));
+   localStorage.setItem('loggedInUser', JSON.stringify(user));
   }
+
 
   getLoggedInUser() {
     return this.loggedInUser;
@@ -32,6 +33,5 @@ export class AuthService {
     const user = localStorage.getItem('loggedInUser');
     if (user) {
       this.loggedInUser = JSON.parse(user);
-    }
-  }
+    }}
 }
