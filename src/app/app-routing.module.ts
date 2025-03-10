@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ProductsComponent } from './products/products.component';
 import { CartComponent } from './cart/cart.component';
 import { AuthGuard } from './authguard.service';
 import { RegistrationComponent } from './registration/registration.component';
