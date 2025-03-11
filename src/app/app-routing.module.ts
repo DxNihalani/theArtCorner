@@ -13,9 +13,9 @@ const routes: Routes = [
 
   { path: 'register', component: RegistrationComponent },
 
- // { path: '', redirectTo: '/registration', pathMatch: 'full' } ,
+ { path: '', redirectTo: '/register', pathMatch: 'full' } ,
 
-  { path: 'dashboard', component: DashboardComponent},
+  { path: 'dashboard', component: DashboardComponent, canActivate :[AuthGuard]},
   { path: 'products', component: ProductsComponent},
   {path:'cart', component:CartComponent},
   {path:'logout', component:LogoutComponent}

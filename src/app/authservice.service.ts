@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { UserService } from './user.service';
+
 
 @Injectable({
   providedIn: 'root'
@@ -6,7 +8,7 @@ import { Injectable } from '@angular/core';
 export class AuthService {
   private loggedInUser: any = null;
 
-  constructor() {
+  constructor(private userService: UserService){
     this.loadUserFromLocalStorage();
   }
 
