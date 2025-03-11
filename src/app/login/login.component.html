@@ -32,6 +32,8 @@
           dolorum consequatur nulla, neque debitis eos reprehenderit quasi
           ab ipsum nisi dolorem modi. Quos?
         </p>
+
+        <a href="/main">Continue as Guest -> </a>
       </div>
       <div class="col-lg-6 mb-5 mb-lg-0 position-relative">
         <div class="card bg-glass">
@@ -39,10 +41,10 @@
             <form (ngSubmit)="onSubmit()" #loginForm="ngForm" >
               <div class="form-outline mb-4">
                 <label class="form-label" for="email">Email address</label>
-                <input type="email" id="email" class="form-control" [(ngModel)]="email" name="email" required email />
-                <div *ngIf="loginForm.submitted && !loginForm.controls['email']?.valid" class="text-danger">
+                <input type="text" id="email" class="form-control" [(ngModel)]="email" name="email" required email />
+                <!-- <div *ngIf="loginForm.submitted && !loginForm.controls['email']?.valid" class="text-danger">
                   Please enter a valid email address.
-                </div>
+                </div> -->
               </div>
             
               <div class="form-outline mb-4">
@@ -52,7 +54,7 @@
                   Password is required !
                 </div> -->
               </div>
-            
+              <a class="nav-link " href="/register">New User? Register Here.</a>
               <button type="submit" class="btn btn-primary btn-block mb-4">Login</button>
             </form>
           </div>

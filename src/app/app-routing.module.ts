@@ -7,15 +7,15 @@ import { ProductsComponent } from './products/products.component';
 import { CartComponent } from './cart/cart.component';
 import { AuthGuard } from './authguard.service';
 import { RegistrationComponent } from './registration/registration.component';
+import { MainBodyComponent } from './main-body/main-body.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
-
   { path: 'register', component: RegistrationComponent },
 
- { path: '', redirectTo: '/register', pathMatch: 'full' } ,
-
-  { path: 'dashboard', component: DashboardComponent, canActivate :[AuthGuard]},
+ { path: '', redirectTo: '/main', pathMatch: 'full' } ,
+  { path: 'dashboard', component: DashboardComponent,canActivate :[AuthGuard]},
+  { path: 'main', component: MainBodyComponent},
   { path: 'products', component: ProductsComponent},
   {path:'cart', component:CartComponent},
   {path:'logout', component:LogoutComponent}

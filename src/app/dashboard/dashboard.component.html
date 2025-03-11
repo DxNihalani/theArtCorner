@@ -11,7 +11,7 @@
           <tbody>
             <tr>
               <th scope="row">Username</th>
-              <td>{{ loggedInUser.uname }}</td>
+              <td>{{ loggedInUser.id}}</td>
             </tr>
             <tr>
               <th scope="row">Email</th>
@@ -58,7 +58,7 @@
       </div>
     </div>
   
-    <h2 class="total">Total Users: {{ users.length }}</h2>
+    <!-- <h2 class="total">Total Users: {{ users.length }}</h2> -->
   
     <h2>Categories</h2>
     <ul class="list-group mb-4">
@@ -69,7 +69,7 @@
     <div class="form-group">
       <label for="category">Filter by Category:</label>
       <select id="category" class="form-control" (change)="onCategoryChange($event)">
-        <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
+        <option *ngFor="let category of categories" [value]="category"><a href="/products" class="nav-link">{{category}}</a></option>
       </select>
     </div>
   

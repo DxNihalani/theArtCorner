@@ -8,6 +8,7 @@ interface User {
   email: string;
   address: string;
   contact: string;
+  id:string;
 }
 
 interface Product {
@@ -35,7 +36,7 @@ export class DashboardComponent implements OnInit {
   isEditVisible: boolean = false;
 
   constructor(private _http: HttpClient, private authService: AuthService) {}
-
+ 
   ngOnInit(): void {
     this.loggedInUser = this.authService.getLoggedInUser();
     console.log(this.loggedInUser);

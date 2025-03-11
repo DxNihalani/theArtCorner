@@ -612,32 +612,6 @@
     }
   ],
   "cart": [
-    {
-      "id": "ed51",
-      "url": "assets/images/sculpture2.jpg",
-      "pname": "Ancient Echoes",
-      "description": "Mystic Faces - Echoes of Ancient Artistry",
-      "category": "Sculpting",
-      "price": 500,
-      "userId": "e410"
-    },
-    {
-      "id": "7ad8",
-      "url": "assets/images/sculpture1.jpg",
-      "pname": "sculpture1",
-      "description": "Vibrant Blue Blossoms - A Burst of Creativity",
-      "category": "Sculpting",
-      "price": 500,
-      "userId": "f747"
-    },
-    {
-      "id": "ed51",
-      "url": "assets/images/sculpture2.jpg",
-      "pname": "Ancient Echoes",
-      "description": "Mystic Faces - Echoes of Ancient Artistry",
-      "category": "Sculpting",
-      "price": 500,
-      "userId": "f747"
-    }
+    
   ]
 }

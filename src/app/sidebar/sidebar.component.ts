@@ -10,5 +10,8 @@ export class SidebarComponent {
   url: string = 'http://localhost:3000/products';
   products: any[] = [];
  
+    setCategory(category:any){
+      localStorage.setItem("Category",category);
+    }
  
 }

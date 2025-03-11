@@ -18,3 +18,15 @@
 .card-body{
     background-color: #F8F6F4;
 }
+
+.header{
+    margin: 10px;
+    text-align: center;
+    padding: 10px;
+}
+
+.container {
+    background-color: #D2E9E9;
+    margin: 0;
+    padding: 12px;
+}
