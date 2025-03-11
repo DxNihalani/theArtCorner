@@ -1,15 +1,20 @@
-<ul class="nav flex-column" style="height: 85vh;">
-  <li class="nav-item">
-    <a class="nav-link" routerLink="/painting">🧑‍🎨 Painting</a>
+
+<button class="nav-item">Top Categories to choose from! </button>
+<ul class="nav flex-column align-self-center" style="height: 85vh; margin-top: 30px;">
+  <li class="nav-item" >
+    <a class="nav-link" (click)="setCategory('Painting')" href="#">🧑‍🎨 Painting</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" routerLink="/crochet">🧶 Crochet</a>
+    <a class="nav-link" (click)="setCategory('Crochet')" href="#">🧶 Crochet</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" routerLink="/sculpture">🗿 Sculpture</a>
+    <a class="nav-link" (click)="setCategory('Sculpting')" href="#">🗿 Sculpture</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" routerLink="/photography">📸 Photography</a>
+    <a class="nav-link" (click)="setCategory('Photography')" href="#">📸 Photography</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" (click)="setCategory('Pen Sketch')" href="#">🖊️ Pen Sketch</a>
   </li>
 </ul>
 <router-outlet></router-outlet>

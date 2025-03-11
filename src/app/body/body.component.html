@@ -1,14 +1,16 @@
 <div class="container mt-2">
+  <div class="header"> <h2>Welcome to the ART CORNER! </h2> </div>
+  <a class="nav-link" href="/products" style="text-align: right;">View More -></a>
   <div class="row">
     <div class="col-md-4 mb-4"  *ngFor="let product of products">
       <div class="card">
-        <img src="{{product.img_src}}" class="card-img-top" style="height: 300px;" [alt]="product.name">
+        <img src="{{product.url}}" class="card-img-top" style="height: 200px;" [alt]="product.pname">
         <div class="card-body">
-          <h5 class="card-title">{{ product.name }}</h5>
+          <h5 class="card-title">{{ product.pname}}</h5>
           <p class="card-text">{{product.description}}</p>
-          <p class="card-text"><strong>Category:</strong>{{ category | titlecase }}</p>
+          <p class="card-text"><strong>Category:</strong>{{ product.category | titlecase }}</p>
           <p class="card-text"><strong>Price:</strong> ${{product.price}}</p>
-          <button class="btn button-add-to-cart">Add to cart</button>
+          <button class="btn button-add-to-cart" (click)="addToCartByID(product.id)">Add to cart</button>
         </div>
       </div>
     </div>

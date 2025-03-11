@@ -21,7 +21,7 @@ export class LoginComponent {
 
   onSubmit() {
     this.userService.getUsers().subscribe(users => {
-      const user = users.find((u: any) => u.email === this.email && u.pwd === this.pwd);
+      const user = users.find((u: any) => (u.email === this.email || u.id === this.email ) && u.pwd === this.pwd);
       if (user) {
 
         this.authService.setLoggedInUser(user);
