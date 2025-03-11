@@ -9,8 +9,7 @@ import { AuthService } from '../authservice.service';
 })
 export class RegistrationComponent {
   user = {
-    firstName: '',
-    lastName: '',
+    uname: '',
     address: '',
     contact: '',
     email: '',
@@ -18,7 +17,8 @@ export class RegistrationComponent {
   };
 
   isRegistered = false; // Add this flag
-  errorMessage = ''; // Add this flag
+  errorMessage = false; // Add this flag
+  // msg = '';
 
   constructor(    private userService: UserService,
     private router: Router,
@@ -27,14 +27,16 @@ export class RegistrationComponent {
   onSubmit(registrationForm: any) {
     if (registrationForm.valid) {
       this.userService.addUser(this.user).subscribe(response => {
-        this.isRegistered = true; // Set the flag to true on successful registration
-        this.errorMessage = ''; // Clear the error message
-        alert('You are registered successfully!'); // Show alert message
-        this.router.navigate(['/login']); // Open login page in a new tab
+        this.isRegistered = true; 
+        this.errorMessage = false;
+        // this.msg = ''; 
+        alert('You are registered successfully!'); 
+        this.router.navigate(['/login']); 
       });
     } else {
-      this.isRegistered = false; // Ensure the success message is not shown
-      this.errorMessage = 'Please enter all valid details.';
+      this.isRegistered = false; 
+      this.errorMessage = true;
+      // this.msg = 'User Not Registered!'
     }
   }
 }

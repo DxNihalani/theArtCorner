@@ -43,7 +43,7 @@ export class ProductsComponent {
   //add specific item to cart
   loading:boolean = false;
   addToCartByID( id:string){
-    this._s.getProductByID(id);
+    this._s.addToCart(id);
     // this._s.addToCart();
   }
   

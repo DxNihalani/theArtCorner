@@ -26,8 +26,7 @@
     },
     {
       "id": "e903",
-      "firstName": "Vidhi",
-      "lastName": "Prajapati",
+      "uname": "Vidhi",
       "address": "C-102. the laal street, mumbai",
       "contact": "1234567865",
       "email": "abc@gmail.com",
@@ -35,12 +34,19 @@
     },
     {
       "id": "e410",
-      "firstName": "sakshi",
-      "lastName": "bole",
+      "uname": "sakshi",
       "address": "deloitte towers",
       "contact": "1234567890",
       "email": "sbole@deloitte.com",
       "pwd": "sakshi"
+    },
+    {
+      "id": "f747",
+      "uname": "dd",
+      "address": "d",
+      "contact": "1234567898",
+      "email": "m@gmzil.com",
+      "pwd": "jhhshshhhs"
     }
   ],
   "products": [
@@ -606,53 +612,6 @@
     }
   ],
   "cart": [
-    {
-      "id": "5ab7",
-      "url": "assets/images/sketch2.jpg",
-      "pname": "Blue Mandala",
-      "description": "A striking blue mandala with geometric patterns.",
-      "category": "Pen Sketch",
-      "price": 500
-    },
-    {
-      "id": "21d1",
-      "url": "assets/images/sketch11.jpg",
-      "pname": "Detailed Mandala",
-      "description": "A highly detailed mandala with intricate designs.",
-      "category": "Pen Sketch",
-      "price": 500
-    },
-    {
-      "id": "7ad8",
-      "url": "assets/images/sculpture1.jpg",
-      "pname": "sculpture1",
-      "description": "Vibrant Blue Blossoms - A Burst of Creativity",
-      "category": "Sculpting",
-      "price": 500
-    },
-    {
-      "id": "7ad8",
-      "url": "assets/images/sculpture1.jpg",
-      "pname": "sculpture1",
-      "description": "Vibrant Blue Blossoms - A Burst of Creativity",
-      "category": "Sculpting",
-      "price": 500
-    },
-    {
-      "id": "7ad8",
-      "url": "assets/images/sculpture1.jpg",
-      "pname": "sculpture1",
-      "description": "Vibrant Blue Blossoms - A Burst of Creativity",
-      "category": "Sculpting",
-      "price": 500
-    },
-    {
-      "id": "7ad8",
-      "url": "assets/images/sculpture1.jpg",
-      "pname": "sculpture1",
-      "description": "Vibrant Blue Blossoms - A Burst of Creativity",
-      "category": "Sculpting",
-      "price": 500
-    }
+    
   ]
 }

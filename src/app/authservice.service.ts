@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { UserService } from './user.service';
+
 
 @Injectable({
   providedIn: 'root'
@@ -6,14 +8,15 @@ import { Injectable } from '@angular/core';
 export class AuthService {
   private loggedInUser: any = null;
 
-  constructor() {
+  constructor(private userService: UserService){
     this.loadUserFromLocalStorage();
   }
 
   setLoggedInUser(user: any) {
     this.loggedInUser = user;
-    localStorage.setItem('loggedInUser', JSON.stringify(user));
+   localStorage.setItem('loggedInUser', JSON.stringify(user));
   }
+
 
   getLoggedInUser() {
     return this.loggedInUser;
@@ -32,6 +35,5 @@ export class AuthService {
     const user = localStorage.getItem('loggedInUser');
     if (user) {
       this.loggedInUser = JSON.parse(user);
-    }
-  }
+    }}
 }

@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: 'register', component: RegistrationComponent },
 
  { path: '', redirectTo: '/main', pathMatch: 'full' } ,
-  { path: 'dashboard', component: DashboardComponent},
+  { path: 'dashboard', component: DashboardComponent,canActivate :[AuthGuard]},
   { path: 'main', component: MainBodyComponent},
   { path: 'products', component: ProductsComponent},
   {path:'cart', component:CartComponent},

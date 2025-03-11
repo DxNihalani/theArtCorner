@@ -38,7 +38,7 @@
       <div class="col-lg-6 mb-5 mb-lg-0 position-relative">
         <div class="card bg-glass">
           <div class="card-body px-4 py-5 px-md-5">
-            <form #loginForm="ngForm" (ngSubmit)="onSubmit()">
+            <form (ngSubmit)="onSubmit()" #loginForm="ngForm" >
               <div class="form-outline mb-4">
                 <label class="form-label" for="email">Email address</label>
                 <input type="text" id="email" class="form-control" [(ngModel)]="email" name="email" required email />
@@ -50,9 +50,9 @@
               <div class="form-outline mb-4">
                 <label class="form-label" for="password">Password</label>
                 <input type="password" id="password" class="form-control" [(ngModel)]="pwd" name="password"/>
-                <div *ngIf="loginForm.submitted && !loginForm.controls['pwd']?.valid" class="text-danger">
+                <!-- <div *ngIf="loginForm.submitted && !loginForm.controls['pwd']?.valid" class="text-danger">
                   Password is required !
-                </div>
+                </div> -->
               </div>
               <a class="nav-link " href="/register">New User? Register Here.</a>
               <button type="submit" class="btn btn-primary btn-block mb-4">Login</button>
