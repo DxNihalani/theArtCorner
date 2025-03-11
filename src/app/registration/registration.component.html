@@ -56,18 +56,17 @@
               <div class="form-outline mb-4">
                 <label class="form-label" for="password">Password</label>
                 <input type="password" id="password" class="form-control" [(ngModel)]="user.pwd" name="password" required minlength="6" />
-                <div *ngIf="registrationForm.submitted && !registrationForm.controls['password']?.valid" class="text-danger">
-                  Password is required !
-                </div>
+                
               </div>
             
               <button type="submit" class="btn btn-primary btn-block mb-4">Sign up</button>
-              <div *ngIf="errorMessage" class="alert alert-danger mt-4">
-                {{ errorMessage }}
-              </div>
               <div *ngIf="isRegistered" class="alert alert-success mt-4">
                 You are registered successfully!
               </div>
+              <div *ngIf="errorMessage" class="alert alert-danger mt-4">
+                "User not Registered!" 
+              </div>
+              
             </form>
           </div>
         </div>
